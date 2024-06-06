@@ -1,9 +1,11 @@
+
 .main {
   flex: 1;
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
 }
+
 .main .nav {
   display: flex;
   align-items: center;
@@ -12,14 +14,17 @@
   padding: 20px;
   color: #585858;
 }
+
 .main .nav img {
   width: 40px;
   border-radius: 50%;
 }
+
 .main-container {
   max-width: 900px;
   margin: auto;
 }
+
 .main .greet {
   margin: 50px 0px;
   font-size: 56px;
@@ -27,6 +32,7 @@
   font-weight: 500;
   padding: 20px;
 }
+
 .main .greet span {
   background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
   -webkit-background-clip: text;
@@ -39,6 +45,7 @@
   gap: 15px;
   padding: 20px;
 }
+
 .main .card {
   height: 200px;
   padding: 15px;
@@ -47,6 +54,7 @@
   position: relative;
   cursor: pointer;
 }
+
 .main .card img {
   width: 35px;
   padding: 5px;
@@ -56,21 +64,26 @@
   bottom: 10px;
   right: 10px;
 }
+
 .main .card p {
   color: #585858;
   font-size: 17px;
 }
+
 .main .card:hover {
   background-color: #dfe4ea;
 }
+
 .main-bottom {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  min-width: 900px;
+  width: 80%;
   padding: 0px 20px;
   margin: auto;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .search-box {
   display: flex;
   align-items: center;
@@ -80,10 +93,12 @@
   padding: 10px 20px;
   border-radius: 50px;
 }
+
 .search-box img {
   width: 24px;
   cursor: pointer;
 }
+
 .search-box input {
   flex: 1;
   background: transparent;
@@ -92,46 +107,55 @@
   padding: 8px;
   font-size: 18px;
 }
+
 .search-box div {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 }
+
 .main .bottom-info {
   font-size: 13px;
   margin: 15px auto;
   text-align: center;
   font-weight: 300;
 }
+
 .result {
-  padding: 0px, 5%;
+  padding: 0px 5%;
   min-height: 70vh;
   overflow-y: scroll;
 }
+
 .result::-webkit-scrollbar {
   display: none;
 }
+
 .result-title {
   margin: 40px 0px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .result img {
   width: 40px;
   border-radius: 50%;
 }
+
 .result-data {
   display: flex;
   align-items: start;
   gap: 20px;
 }
+
 .loader {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .loader hr {
   border-radius: 4px;
   border: none;
@@ -141,16 +165,32 @@
   height: 20px;
   animation: loader 3s infinite linear;
 }
+
 @keyframes loader {
-  0%{
+  0% {
     background-position: -800px 0px;
   }
   100% {
     background-position: 800px 0px;
   }
 }
-.result-data p{
+
+.result-data p {
   font-size: 17px;
   font-weight: 300;
   line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .search-box input {
+    width: 100%;
+  }
+
+  .search-box {
+    padding: 5px 10px;
+  }
+
+  .search-box div {
+    gap: 5px;
+  }
 }
